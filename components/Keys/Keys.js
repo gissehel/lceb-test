@@ -1,11 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Key from '../components/Key'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Keys.module.css';
 
-export default function Home() {
-  return (
-    <div>
+const Keys = ({ keys }) => {
+    return <div className={styles.main}>
         <div>
           <Key text='+' disabled={false} />
           <Key text='8' disabled={true} />
@@ -31,5 +29,12 @@ export default function Home() {
           <Key text='⇦' disabled={false} />
         </div>
     </div>
-  )
 }
+
+Keys.propTypes = {
+};
+
+Keys.defaultProps = {
+};
+
+export default Keys;

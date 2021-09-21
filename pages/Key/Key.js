@@ -4,7 +4,7 @@ import styles from './Key.module.css'
 
 const Key = ({text, subtext, onClick, disabled, selected}) => {
     const className = classnames(
-        styles.Key, 
+        styles.main, 
         {
             [styles.disabled]:disabled, 
             [styles.enabled]:!disabled,

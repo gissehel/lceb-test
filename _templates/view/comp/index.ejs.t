@@ -1,5 +1,5 @@
 ---
-to: components/<%= name %>/index.js
+to: views/<%= name %>/index.js
 ---
 import <%= name %> from './<%= name %>';
 

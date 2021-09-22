@@ -1,5 +1,5 @@
 ---
-to: components/<%= name %>/<%= name %>.js
+to: views/<%= name %>/<%= name %>.js
 ---
 import React from 'react';
 import PropTypes from 'prop-types';

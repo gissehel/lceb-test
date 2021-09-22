@@ -1,5 +1,5 @@
 ---
-to: components/<%= name %>/index.js
+to: views/<%= name %>/index.js
 ---
 import actions from '../../actions'
 import { useDispatch, useSelector } from 'react-redux'

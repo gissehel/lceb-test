@@ -1,5 +1,5 @@
 ---
-to: components/<%= name %>/<%= name %>.css
+to: views/<%= name %>/<%= name %>.module.css
 ---
 .main {
 }

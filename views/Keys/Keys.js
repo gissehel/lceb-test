@@ -9,7 +9,7 @@ const getKey = (key, keyId, onValue, onOperator) => {
   const disabled = type === OPERATOR ? false : !activated ;
   const text = type === OPERATOR ? operator : value;
   const onClick = disabled ? undefined : () => (type === OPERATOR ? onOperator : onValue)(text, keyId);
-  return <Key text={text} onClick={onClick} subtext={subtext} selected={selected} disabled={disabled} />;
+  return <Key key={keyId} text={text} onClick={onClick} subtext={subtext} selected={selected} disabled={disabled} />;
 }
 
 const layout = [[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14,15]]
@@ -17,7 +17,7 @@ const layout = [[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14,15]]
 const Keys = ({ keys, onValue, onOperator }) => {
     return <div className={styles.main}>
         {
-          layout.map((line) => <div>{line.map((keyId) => getKey(keys[keyId], keyId, onValue, onOperator))}</div>)
+          layout.map((line, lineId) => <div key={lineId}>{line.map((keyId) => getKey(keys[keyId], keyId, onValue, onOperator))}</div>)
         }
     </div>
 }
